@@ -1,0 +1,14 @@
+We would like to make these instructions as general as possible. First, install neovim from the github.
+First, download the repo into some location
+	git clone https://github.com/neovim/neovim/
+	cd neovim
+
+We then want to install it, the instructions are in the readme for neovim but the standard install is
+	make CMAKE_BUILD_TYPE=RelWithDebInfo
+	sudo make install
+
+Then we want to install the configuration files. We do this by placing this repository into the ~/.config/ folder
+
+Then, by calling nvim, it should install all the plugins. Note, we want to install clang to parse the C++ code so we use command
+	:LspInstall clangd
+inside the vim window
